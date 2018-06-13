@@ -4,14 +4,17 @@ def crusts()
 	crusts = ["stuffed_crust", "thin_crust", "flatbread", "thick_crust"]
 end
 
-''
 
-#Randomly select the available toppings
-def toppings()
-	toppings = ["mushrooms", "bacon", "pepperoni", "sausage", "anchovies"]
+#Randomly select the available meat toppings
+def meat_toppings()
+	meat_toppings = ["bacon", "pepperoni", "sausage", "anchovies"]
 end
 
-''
+#Randomly select the available vegetable toppings
+def vegetable_toppings()
+	vegetable_toppings = ["mushrooms", "spinach", "broccoli", "pineapple", "peppers"]
+end
+
 
 #Randomly select the available sizes
 def sizes()
@@ -28,17 +31,16 @@ end
 # Master function for building pizza
 def build_pizza()
 	crust = crusts().sample
-puts "Here's your pizza's crust:"
 puts crust
-	topping = toppings().sample
-puts "Here's your pizza's topping:"
-puts topping
+	meat_topping = meat_toppings().sample
+puts meat_topping
+	vegetable_topping = vegetable_toppings().sample
+puts vegetable_topping
 	size = sizes().sample
-puts "Here's your pizza's size:"
 puts size
 	sauce = sauces().sample
-puts "Here's your pizza's sauce:"
 puts sauce
+puts "Here is your #{size} pizza with #{meat_topping} and #{vegetable_topping}, with #{sauce} and #{crust}."
 
 end
 
