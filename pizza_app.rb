@@ -1,7 +1,7 @@
 
 # Randomly select the available crusts
 def crusts()
-	crusts = ["stuffed_crust", "thin_crust", "flatbread", "thick_crust"]
+	crusts = ["stuffed crust", "thin crust", "flatbread", "thick crust"]
 end
 
 
@@ -30,20 +30,25 @@ end
 
 # Master function for building pizza
 def build_pizza()
+puts "Alright, no problem! How many pizzas do you want?"
+	pizza_count = gets.chomp.to_i
+	while pizza_count > 0 do
 	crust = crusts().sample
-puts crust
 	meat_topping = meat_toppings().sample
-puts meat_topping
 	vegetable_topping = vegetable_toppings().sample
-puts vegetable_topping
 	size = sizes().sample
-puts size
 	sauce = sauces().sample
-puts sauce
-puts "Here is your #{size} pizza with #{meat_topping} and #{vegetable_topping}, with #{sauce} and #{crust}."
+	puts "Here's your #{size} pizza with #{meat_topping} and #{vegetable_topping}, with #{sauce} and #{crust}."
+pizza_count -= 1
+# Number of pizzas that the customer wants
 
-end
+# def extra_cheese
+# if extra_cheese.choice = yes
+
+# end
 
 # Print the result of building the pizza to the console
-puts build_pizza()
+end
+end
 
+ build_pizza()
