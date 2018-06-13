@@ -32,6 +32,7 @@ end
 def build_pizza()
 puts "Alright, no problem! How many pizzas do you want?"
 	pizza_count = gets.chomp.to_i
+	# Don't allow 0 pizzas to be ordered
 	while pizza_count > 0 do
 	crust = crusts().sample
 	meat_topping = meat_toppings().sample
@@ -39,15 +40,10 @@ puts "Alright, no problem! How many pizzas do you want?"
 	size = sizes().sample
 	sauce = sauces().sample
 	puts "Here's your #{size} pizza with #{meat_topping} and #{vegetable_topping}, with #{sauce} and #{crust}."
+# Do a loop until the number of pizzas ordered are finished
 pizza_count -= 1
-# Number of pizzas that the customer wants
 
-# def extra_cheese
-# if extra_cheese.choice = yes
 
-# end
-
-# Print the result of building the pizza to the console
 end
 end
 
