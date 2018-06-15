@@ -1,1 +1,1 @@
-pizza app
+This is a pizza app that takes available customization options for making a pizza, calculates the price (including tax), and gives the user the final price with a summary of their order.
